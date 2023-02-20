@@ -15,15 +15,15 @@ sources:
               - not_null
               
         
-        name: film
-        description:Dados do filme
+      - name: film
+        description: Dados do filme
 
-        name: inventory
+      - name: inventory
         description: Link da tabela rental para tabela film e diferencia store
 
-        name: film_category
+      - name: film_category
         description: Link da tabela category para link com nome da categoria na tabela category
 
-        name: category
+      - name: category
         description: Nome da categoria do filme
 
