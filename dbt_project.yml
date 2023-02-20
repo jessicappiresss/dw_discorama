@@ -33,8 +33,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   dbt_discorama:
-    example:
-      +materialized: table
+    staging:
+      erp_discorama:
+        +materialized: view
 
 seeds:
   dbt_discorama:

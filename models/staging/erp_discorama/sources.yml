@@ -6,24 +6,26 @@ sources:
     schema: dbt_jessicappiresss_erp_discorama
     tables:
       - name: rental
-        description: Dados do aluguel dos dvds. Link com a tabela inventory e film
+        description: Tabela com os dados dos alugueis dos dvds.
         columns:
           - name: rental_id
             description: chave primaria da tabela rental
             tests:
               - unique
               - not_null
-              
-        
+                      
       - name: film
-        description: Dados do filme
+        description: Tabela com os dados dos filmes da Discorama.
+
+      - name: payment
+        description: Tabela com os dados de pagamentos dos alugueis da Discorama.
 
       - name: inventory
-        description: Link da tabela rental para tabela film e diferencia store
+        description: Tabela com os dados de inventório de cada dvd da discorama.
 
       - name: film_category
-        description: Link da tabela category para link com nome da categoria na tabela category
+        description: Tabela que relaciona as chaves primárias film_id com category_id.
 
       - name: category
-        description: Nome da categoria do filme
+        description: Tabela com os nomes das categorias dos filmes da Discorama.
 
