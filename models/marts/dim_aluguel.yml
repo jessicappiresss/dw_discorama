@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: dim_aluguel
+    description: Dimensão com informação de aluguel dos dvds da Discorama.
+    columns:
+      - name: sk_aluguel
+        description: E a primary key da dimensão aluguel.
+        tests:
+          - unique
+          - not_null
+      
+      - name: id_aluguel
+        description: Identificação do aluguel.
+
+      - name: id_inventario
+        description: Identificação do dvd no inventario.
+
+      - name: id_cliente
+        description: Identificação do cliente.
+
+      - name: id_funcionario
+        description: Identificação do funcionario.
+
+      - name: data_do_aluguel
+        description: Data do aluguel.
+
+      - name: data_de_devolucao
+        description: Data da devolução.
+
+      - name: id_pagamento
+        description: Identificação do pagamento.
+
+      - name: valor_do_pagamento
+        description: Valor do pagamento.
+
+      - name: data_do_pagamento
+        description: Data do pagamento.

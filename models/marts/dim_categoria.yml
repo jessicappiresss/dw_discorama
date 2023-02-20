@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_categoria
+    description: Dimensão com informação de categoria dos filmes da Discorama.
+    columns:
+      - name: sk_categoria
+        description: E a primary key da dimensão categoria.
+        tests:
+          - unique
+          - not_null
+      
+      - name: id_aluguel
+        description: Identificação do aluguel.
+
+      - name: id_categoria	
+        description: Identificação da categoria.
+
+      - name: nome_categoria
+        description: Nome da categoria.
+
+      - name: id_filme
+        description: Identificação do filme.
