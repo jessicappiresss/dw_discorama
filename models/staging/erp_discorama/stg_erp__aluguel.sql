@@ -7,7 +7,7 @@ with
             , cast(staff_id as int) as id_funcionario
             , cast(rental_date as date) as data_do_aluguel
             , cast(return_date as date) as data_de_devolucao
-            , cast(last_update as date) as ultima_atualizacao		
+            , cast(last_update as date) as ultima_atualizacao_aluguel		
         from {{ source('erp', 'rental')}}
     )
 select *
