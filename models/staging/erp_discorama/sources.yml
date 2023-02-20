@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: erp
+    description: Banco réplica do erp da discorama.
+    schema: dbt_jessicappiresss_erp_discorama
+    tables:
+      - name: rental
+        description: Dados do aluguel dos dvds. Link com a tabela inventory e film
+        columns:
+          - name: rental_id
+            description: chave primaria da tabela rental
+            tests:
+              - unique
+              - not_null
+              
+        
+        name: film
+        description:Dados do filme
+
+        name: inventory
+        description: Link da tabela rental para tabela film e diferencia store
+
+        name: film_category
+        description: Link da tabela category para link com nome da categoria na tabela category
+
+        name: category
+        description: Nome da categoria do filme
+
