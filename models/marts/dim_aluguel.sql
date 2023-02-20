@@ -13,14 +13,12 @@ with
         select		
             aluguel.id_aluguel
             , aluguel.id_inventario
-            , aluguel.aluguel.id_cliente
+            , aluguel.id_cliente
             , aluguel.id_funcionario
             , aluguel.data_do_aluguel
             , aluguel.data_de_devolucao
             , aluguel.ultima_atualizacao_aluguel
             , pagamento.id_pagamento
-            , pagamento.id_cliente
-            , pagamento.id_funcionario
             , pagamento.valor_do_pagamento
             , pagamento.data_do_pagamento		
                    
