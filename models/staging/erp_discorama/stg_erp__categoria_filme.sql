@@ -3,7 +3,7 @@ with
         select 
             cast(film_id as int) as id_filme				
             , cast(category_id as int) as id_categoria			
-            , cast(last_update as date) as ultima_atualizacao_categoria_filme		
+            , cast(last_update as string) as ultima_atualizacao_categoria_filme		
         from {{ source('erp', 'film_category')}}
     )
 select *

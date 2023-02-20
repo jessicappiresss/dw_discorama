@@ -37,6 +37,10 @@ models:
       erp_discorama:
         +materialized: view
 
+    marts:
+      +materialized: table 
+
+
 seeds:
   dbt_discorama:
     erp_discorama:
