@@ -6,7 +6,7 @@ with
             , cast(staff_id as int) id_funcionario
             , cast(rental_id as int) id_aluguel
             , cast(amount as numeric) as valor_do_pagamento
-            , payment_date as data_do_pagamento
+            , SUBSTRING(payment_date, 1, 10) as data_do_pagamento
         from {{ source('erp', 'payment')}}
     )
 select *

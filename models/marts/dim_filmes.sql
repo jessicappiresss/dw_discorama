@@ -22,9 +22,7 @@ with
             , filmes.duracao_filme_minutos			
             , filmes.custo_reposicao			
             , filmes.avaliacao 		
-            , filmes.ultima_atualizacao_filmes
             , inventario.id_loja
-            , inventario.ultima_atualizacao_inventario        
         from inventario
         left join filmes on inventario.id_filme = filmes.id_filme
 

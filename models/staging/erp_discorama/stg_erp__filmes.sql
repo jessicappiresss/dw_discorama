@@ -11,7 +11,7 @@ with
             , cast(length as int) as duracao_filme_minutos			
             , cast(replacement_cost as numeric) as custo_reposicao			
             , cast(rating as string) as avaliacao 		
-            , last_update as ultima_atualizacao_filmes			
+           -- , last_update as ultima_atualizacao_filmes			
             --, special_features				
             --, fulltext		
         from {{ source('erp', 'film')}}

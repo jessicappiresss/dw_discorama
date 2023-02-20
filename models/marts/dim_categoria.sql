@@ -13,9 +13,7 @@ with
         select		
             categoria.id_categoria				
             , categoria.nome_categoria				
-            , categoria.ultima_atualizacao_categoria	
             , categoria_filme.id_filme							
-            , categoria_filme.ultima_atualizacao_categoria_filme	
                    
         from categoria_filme
         left join categoria on categoria_filme.id_categoria = categoria.id_categoria

@@ -5,9 +5,9 @@ with
             , cast(inventory_id as int) as id_inventario
             , cast(customer_id as int) as id_cliente
             , cast(staff_id as int) as id_funcionario
-            , rental_date as data_do_aluguel
-            , return_date as data_de_devolucao
-            , last_update as ultima_atualizacao_aluguel		
+            , SUBSTRING(rental_date, 1, 10) as data_do_aluguel
+            , SUBSTRING(return_date, 1, 10) as data_de_devolucao
+           -- , last_update as ultima_atualizacao_aluguel		
         from {{ source('erp', 'rental')}}
     )
 select *
