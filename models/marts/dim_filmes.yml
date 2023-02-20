@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: dim_filmes
+    description: Dimensão com informação dos filmes da Discorama.
+    columns:
+      - name: sk_inventario
+        description: E a primary key da dimensão filmes.
+        tests:
+          - unique
+          - not_null
+      
+      - name: id_filme	
+        description: Identificação do filme.
+
+      - name: id_idioma
+        description: Identificação do idioma.
+
+      - name: id_inventario
+        description: Identificação inventario.
+
+      - name: descricao
+        description: Descrição do filme.
+
+      - name: titulo
+        description: Título do filme.
+
+      - name: duracao_aluguel	
+        description: Duração do aluguel.
+
+      - name: ano_lancamento	
+        description: Ano de lançamento do filme.
+
+      - name: duracao_filme_minutos	
+        description: duração do filme.
+
+      - name: taxa_aluguel		
+        description: Taxa de aluguel do filme.
+
+      - name: avaliacao 		
+        description: avaliação do filme.
+
+      - name: custo_reposicao		
+        description: Custo de resposição do filme.
+
+      - name: id_loja
+        description: Identificação da loja.
