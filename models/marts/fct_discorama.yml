@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fct_discorama
+    description: Tabela com os fatos da discorama.
+    columns:
+      - name: sk_discorama
+        description: E a primary key da tabela fatos da discorama.
+        tests:
+          - unique
+          - not_null
