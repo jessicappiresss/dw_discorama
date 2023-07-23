@@ -29,3 +29,10 @@ sources:
       - name: category
         description: Tabela com os nomes das categorias dos filmes da Discorama.
 
+
+      - name: actor
+        description: Tabela com os nomes dos atores dos filmes da Discorama.
+
+
+      - name: film_actor
+        description: Tabela com os nomes dos atores e os filmes da Discorama.

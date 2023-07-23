@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_atores
+    description: Dimensão com informação de atores dos filmes da Discorama.
+    columns:
+      - name: sk_atores
+        description: E a primary key da dimensão atores.
+        tests:
+          - unique
+          - not_null
+      
+      - name: id_ator
+        description: Identificação do ator.
+
+      - name: id_filme	
+        description: Identificação do filme.
+
+      - name: primeiro_nome
+        description: Primeiro nome do ator.
+
+      - name: sobrenome
+        description: Sobrenome do ator.
