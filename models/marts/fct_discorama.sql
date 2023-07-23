@@ -15,11 +15,18 @@ with
         from {{ ref('dim_filmes') }}
     )
 
+    , atores as (
+        select *
+        from {{ ref('dim_atores') }}
+    )
+
+
     , joined as (
         select 
             aluguel.sk_aluguel as fk_aluguel
             , categoria.sk_categoria as fk_categoria            
-            , filmes.sk_inventario as fk_inventario            
+            , filmes.sk_inventario as fk_inventario
+            , atores.sk_ator as fk_ator            
             , aluguel.id_cliente
             , aluguel.id_funcionario
             , aluguel.data_do_aluguel
@@ -38,10 +45,14 @@ with
             , filmes.duracao_filme_minutos			
             , filmes.custo_reposicao			
             , filmes.avaliacao 		
-            , filmes.id_loja         
+            , filmes.id_loja			
+            , atores.id_ator
+            , atores.primeiro_nome
+            , atores.sobrenome                     
         from filmes
         left join categoria on categoria.id_filme = filmes.id_filme
         left join aluguel on aluguel.id_inventario = filmes.id_inventario
+        left join atores on atores.id_filme = filmes.id_filme
     )
     
 select 
