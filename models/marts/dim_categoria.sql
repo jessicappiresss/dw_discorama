@@ -1,3 +1,4 @@
+-- atualizado e corrigido para o lighthouse 23-9
 with
     categoria as (
         select *		
